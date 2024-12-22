@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KayyXd | WebStore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>KayyXd Market</h1>
+        <p>Tempat Belanja Aman Dan Terpercaya</p>
+    </header>
+
+    <div class="floating-button cart-button" onclick="viewCart()">
+        &#128722;
+    </div>
+
+    <div class="floating-button feedback-button" onclick="openFeedback()">
+        &#128172;
+    </div>
+
+    <section id="products">
+        <div class="product" data-id="1" data-name="pterodactyl unli" data-price="1000">
+            <h3>Panel Pterodactyl 1Gb-Unlimited</h3>
+            <p>================</p>
+            <p>Rp1.000-Rp8.000</p>
+            <button onclick="addToCart(1)">Tambah ke Keranjang</button>
+        </div>
+        <div class="product" data-id="2" data-name="owner panel" data-price="12000">
+            <h3>Owner Panel</h3>
+            <p>================</p>
+            <p>Rp12.000</p>
+            <button onclick="addToCart(2)">Tambah ke Keranjang</button>
+        </div>
+        <div class="product" data-id="3" data-name="pt panel" data-price="10000"
+          >
+          <h3>Pt Panel</h3>
+          <p>=================</p>
+          <p>Rp10.000</p>
+          <button onclick="addToCart(3)"
+          >Tambah Ke Keranjang</button>
+        </div>
+        <div class="product" data-id="4" data-name="domain xyz" data-price="20000"
+          >
+          <h3>Domain Xyz</h3>
+          <p>=================</p>
+          <p>Rp20.000</p>
+          <button onclick="addToCart(4)"
+          >Tambah Ke Keranjang</button>
+        </div>
+        <div class="product" data-id="5" data-name="vps r1c1" data-price="15000"
+          >
+          <h3>VPS R1C1</h3>
+          <p>=================</p>
+          <p>Rp15.000</p>
+          <button onclick="addToCart(5)"
+          >Tambah Ke Keranjang</button>
+        </div>
+        <div class="product" data-id="6" data-name="vps r2c2" data-price="25000"
+          >
+          <h3>VPS R2C2</h3>
+          <p>=================</p>
+          <p>Rp25.000</p>
+          <button onclick="addToCart(6)"
+          >Tambah Ke Keranjang</button>
+        </div>
+        <div class="product" data-id="7" data-name="vps r4c2" data-price="35000"
+          >
+          <h3>VPS R4C2</h3>
+          <p>=================</p>
+          <p>Rp35.000</p>
+          <button onclick="addToCart(7)"
+          >Tambah Ke Keranjang</button>
+        </div>
+        <div class="product" data-id="8" data-name="vps r8c4" data-price="45000"
+          >
+          <h3>VPS R8C4</h3>
+          <p>=================</p>
+          <p>Rp45.000</p>
+          <button onclick="addToCart(8)"
+          >Tambah Ke Keranjang</button>
+        </div>
+        <div class="product" data-id="9" data-name="vps r16c4" data-price="55000"
+          >
+          <h3>VPS R16C4</h3>
+          <p>=================</p>
+          <p>Rp55.000</p>
+          <button onclick="addToCart(9)"
+          >Tambah Ke Keranjang</button>
+        </div>
+ 
+    </section>
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Keranjang Belanja</h2>
+            <p>====================</p>
+            <div id="cartItems"></div>
+            <p>====================</p>
+            <button onclick="sendOrder()">Lanjutkan Pemesanan</button>
+        </div>
+    </div>
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeFeedback()">&times;</span>
+            <h2>Masukkan Feedback</h2>
+            <textarea id="feedbackMessage" placeholder="Ketik disini .."></textarea>
+            <button onclick="sendFeedback()">Kirim</button>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>
